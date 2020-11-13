@@ -1,3 +1,3 @@
 # DS_project
 
-project for CETM46
+project for CETM46 - chatbot
