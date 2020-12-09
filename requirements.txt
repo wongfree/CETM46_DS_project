@@ -1,8 +1,10 @@
 altair==4.1.0
 attrs==20.3.0
 cycler==0.10.0
+dj-database-url==0.5.0
 Django==1.11.29
 django-crispy-forms==1.10.0
+django-heroku==0.3.1
 entrypoints==0.3
 Jinja2==2.11.2
 jsonschema==3.2.0
@@ -12,6 +14,7 @@ matplotlib==3.3.3
 numpy==1.19.4
 pandas==1.1.5
 Pillow==8.0.1
+psycopg2==2.8.6
 pyparsing==2.4.7
 pyrsistent==0.17.3
 python-dateutil==2.8.1
@@ -19,3 +22,4 @@ pytz==2020.4
 six==1.15.0
 toolz==0.11.1
 tornado==6.1
+whitenoise==5.2.0
