@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'bot',
     'main',
+    'chatterbot.ext.django_chatterbot',
 ]
 
 MIDDLEWARE = [
@@ -133,5 +134,16 @@ STATICFILES_DIRS = (
 CRISPY_TEMPLATE_PACK = 'bootstrap3'
 
 FILE_UPLOAD_MAX_MEMORY_SIZE = 52428800
+
+CHATTERBOT = {
+    'name': 'Tech Support Bot',
+    'logic_adapters': [
+        'chatterbot.logic.MathematicalEvaluation',
+        'chatterbot.logic.TimeLogicAdapter',
+        'chatterbot.logic.BestMatch'
+    ]
+}
+
+
 
 django_heroku.settings(locals())
