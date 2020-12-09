@@ -12,7 +12,7 @@
     <meta name="author" content="">
     <meta http-equiv="refresh" content="900"/>
     {% block meta %}{% endblock %}
-    <title>BIHK - {% block title %}{% endblock %}</title>
+    <title>{% block title %}{% endblock %}</title>
 
     <link rel="stylesheet" type="text/css" href="{% static 'css/jquery.dataTables.min.css'%}">
     <link rel="stylesheet" type="text/css" href="{% static 'css/dataTables.jqueryui.min.css'%}">
@@ -23,6 +23,7 @@
 
     <link rel="stylesheet" href="{% static 'css/mps.css' %}">
     {% block style %} {% endblock %}
+    <style>.beta-ribbon { z-index: 100; text-transform: uppercase; font-weight: 800; font-size: 15px; width: 200px; background: #50bcb6; position: absolute; top: 15px; right: -70px; text-align: center; line-height: 30px; letter-spacing: 1px; color: #f0f0f0; transform: rotate(45deg); }</style>
     <!--[if lt IE 9]-->
     <script src="{% static 'js/html5shiv.min.js'%}"></script>
     <script src="{% static 'js/respond.min.js'%}"></script>
