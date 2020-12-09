@@ -28,7 +28,7 @@ def main():
     os.environ['DJANGO_SETTINGS_MODULE'] = 'web.settings'
 
     settings = {
-    "static_path": os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'freechatbot','static'),
+    "static_path": os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'staticfiles'),
     "static_url_prefix": "/static/"
     #"xsrf_cookies": True,
 	#"debug":True,
@@ -37,14 +37,14 @@ def main():
 
     wsgi_app = get_wsgi_application()
     container = tornado.wsgi.WSGIContainer(wsgi_app)
-    STATIC_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'static')
-    MEDIA_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'media')
+    STATIC_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'staticfiles')
+
 
 
     tornado_app = tornado.web.Application(
         [
 			(r'/static/(.*)', tornado.web.StaticFileHandler, {'path': STATIC_PATH}), 
-			(r'/media/(.*)', tornado.web.StaticFileHandler, {'path': MEDIA_PATH}),
+
             ('.*', tornado.web.FallbackHandler, dict(fallback=container)),
             #dict(path=settings['static_path','media_path']),
 			
