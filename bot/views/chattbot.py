@@ -4,7 +4,7 @@ from django.views.generic import View
 from django.http import JsonResponse
 from chatterbot import ChatBot
 from chatterbot.ext.django_chatterbot import settings
-
+from django.views.decorators.csrf import csrf_exempt
 
 
 class ChatterBotAppView(TemplateView):
@@ -17,6 +17,7 @@ class ChatterBotApiView(View):
     """
     chatterbot = ChatBot(**settings.CHATTERBOT)
 
+    @csrf_exempt
     def post(self, request, *args, **kwargs):
         input_data = json.loads(request.body.decode('utf-8'))
 
