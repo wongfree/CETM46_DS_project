@@ -35,7 +35,7 @@
 
 {% block script %}
     var chatterbotUrl = '{% url "bot:chatterbot" %}';
-    var csrftoken = Cookies.get('csrftoken');
+    const csrftoken = Cookies.get('csrftoken');
 
     function csrfSafeMethod(method) {
         // these HTTP methods do not require CSRF protection
