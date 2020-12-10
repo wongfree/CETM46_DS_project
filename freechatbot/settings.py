@@ -10,8 +10,14 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
-import os
 import django_heroku
+import os, platform, subprocess, socket
+
+
+if platform.system() == "Windows":
+    ip = socket.gethostbyname(socket.gethostname())
+else:
+    ip = subprocess.getoutput('hostname -I').strip()
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -27,7 +33,7 @@ SECRET_KEY = os.getenv('SECRET_KEY', '#@$dqbawlso@w-tpe!&g1zni41tj05(pzw0k)6d2v_
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['freechatbot.herokuapp.com','127.0.0.1']
+ALLOWED_HOSTS = ['freechatbot.herokuapp.com','127.0.0.1',ip]
 
 
 # Application definition
@@ -49,7 +55,7 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
+    # 'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',

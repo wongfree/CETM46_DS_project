@@ -11,7 +11,7 @@ from django.utils.decorators import method_decorator
 class ChatterBotAppView(TemplateView):
     template_name = 'bot/app.html'
 
-@method_decorator(csrf_exempt, name='post')
+@method_decorator(csrf_exempt, name='dispatch')
 class ChatterBotApiView(View):
     """
     Provide an API endpoint to interact with ChatterBot.
