@@ -136,14 +136,22 @@ CRISPY_TEMPLATE_PACK = 'bootstrap3'
 FILE_UPLOAD_MAX_MEMORY_SIZE = 52428800
 
 CHATTERBOT = {
-    'name': 'Tech Support Bot',
+    'name': 'ChatBot',
+    'trainer':'chatterbot.trainers.CorpusTrainer',
     'django_app_name': 'django_chatterbot',
     'storage_adapter':'chatterbot.storage.SQLStorageAdapter',
     'database_uri':'sqlite:///{}'.format(os.path.join(BASE_DIR, 'db.sqlite3')),
+    'database': 'chatbot',
+    'preprocessors': [
+        'chatterbot.preprocessors.clean_whitespace',
+        'chatterbot.preprocessors.convert_to_ascii'
+    ],
     'logic_adapters': [
+        'chatterbot.logic.UnitConversion',
         'chatterbot.logic.MathematicalEvaluation',
         'chatterbot.logic.TimeLogicAdapter',
-        'chatterbot.logic.BestMatch'
+        'chatterbot.logic.BestMatch',
+
     ]
 }
 

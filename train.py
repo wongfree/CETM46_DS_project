@@ -5,7 +5,7 @@ import spacy
 
 nlp = spacy.load('en_core_web_sm')
 
-chatbot = ChatBot('Chatterbot',
+chatbot = ChatBot('ChatBot',
                   trainer='chatterbot.trainers.CorpusTrainer',
                   storage_adapter='chatterbot.storage.SQLStorageAdapter',
                   database_uri='sqlite:///db.sqlite3'
