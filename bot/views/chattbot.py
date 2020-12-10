@@ -5,19 +5,20 @@ from django.http import JsonResponse
 from chatterbot import ChatBot
 from chatterbot.ext.django_chatterbot import settings
 from django.views.decorators.csrf import csrf_exempt
+from django.utils.decorators import method_decorator
 
 
 class ChatterBotAppView(TemplateView):
     template_name = 'bot/app.html'
 
-
+@method_decorator(csrf_exempt, name='post')
 class ChatterBotApiView(View):
     """
     Provide an API endpoint to interact with ChatterBot.
     """
     chatterbot = ChatBot(**settings.CHATTERBOT)
 
-    @csrf_exempt
+
     def post(self, request, *args, **kwargs):
         input_data = json.loads(request.body.decode('utf-8'))
 
