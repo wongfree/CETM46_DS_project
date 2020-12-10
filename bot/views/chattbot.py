@@ -8,7 +8,7 @@ from chatterbot.ext.django_chatterbot import settings
 
 
 class ChatterBotAppView(TemplateView):
-    template_name = 'app.html'
+    template_name = 'bot/app.html'
 
 
 class ChatterBotApiView(View):
