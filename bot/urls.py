@@ -7,6 +7,6 @@ from .views.chattbot import *
 app_name='bot'
 urlpatterns = [
     url(r'^$',index,name='index'),
-    url(r'^$', ChatterBotAppView.as_view(), name='main'),
+    url(r'^chatbot/$', ChatterBotAppView.as_view(), name='main'),
     url(r'^api/chatterbot/', ChatterBotApiView.as_view(), name='chatterbot'),
 ]
