@@ -138,6 +138,8 @@ FILE_UPLOAD_MAX_MEMORY_SIZE = 52428800
 CHATTERBOT = {
     'name': 'Tech Support Bot',
     'django_app_name': 'django_chatterbot',
+    'storage_adapter':'chatterbot.storage.SQLStorageAdapter',
+    'database_uri':'sqlite:///{}'.format(os.path.join(BASE_DIR, 'db.sqlite3')),
     'logic_adapters': [
         'chatterbot.logic.MathematicalEvaluation',
         'chatterbot.logic.TimeLogicAdapter',
