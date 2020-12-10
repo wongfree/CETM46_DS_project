@@ -27,7 +27,7 @@ SECRET_KEY = os.getenv('SECRET_KEY', '#@$dqbawlso@w-tpe!&g1zni41tj05(pzw0k)6d2v_
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['freechatbot.herokuapp.com','127.0.0.1']
 
 
 # Application definition
