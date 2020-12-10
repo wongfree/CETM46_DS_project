@@ -36,7 +36,7 @@
 
 
 {% block script %}
-    var chatterbotUrl = '{% url "chatterbot" %}';
+    var chatterbotUrl = '{% url "bot:chatterbot" %}';
     var csrftoken = Cookies.get('csrftoken');
 
     function csrfSafeMethod(method) {
