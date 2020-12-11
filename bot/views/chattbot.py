@@ -22,7 +22,7 @@ class ChatterBotAppView(TemplateView):
             greeting = 'Hello'
 
         data = super(ChatterBotAppView, self).get_context_data(**kwargs)
-        if 'AnonymousUser' in self.request.user:
+        if self.request.user.is_anonymous:
             data['greeting'] = '{},What can I help you? '.format(greeting)
         else:
             data['greeting'] = '{} {}, What can I help you? '.format(greeting,self.request.user)
