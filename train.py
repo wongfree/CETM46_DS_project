@@ -1,18 +1,30 @@
 from chatterbot import ChatBot
 from chatterbot.trainers import ChatterBotCorpusTrainer
-import en_core_web_sm
-import spacy
+from freechatbot import settings
 
-nlp = spacy.load('en_core_web_sm')
+chatbot = ChatBot(**settings.CHATTERBOT)
 
-chatbot = ChatBot('ChatBot',
-                  trainer='chatterbot.trainers.CorpusTrainer',
-                  storage_adapter='chatterbot.storage.SQLStorageAdapter',
-                  database_uri='sqlite:///db.sqlite3'
-                  )
 trainer = ChatterBotCorpusTrainer(chatbot)
 trainer.train(
                 "chatterbot.corpus.english",
-                "chatterbot.corpus.english.greetings",
-                "chatterbot.corpus.english.conversations"
+
               )
+from chatterbot.trainers import ListTrainer
+
+trainer = ListTrainer(chatbot)
+
+trainer.train([
+    "How are you?",
+    "I am good.",
+    "That is good to hear.",
+    "Thank you",
+    "You are welcome.",
+    ])
+
+from chatterbot.trainers import UbuntuCorpusTrainer
+#
+#
+trainer = UbuntuCorpusTrainer(chatbot)
+#
+# # Start by training our bot with the Ubuntu corpus data
+# trainer.train()
