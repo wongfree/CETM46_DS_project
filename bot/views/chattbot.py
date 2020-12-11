@@ -6,17 +6,16 @@ from chatterbot import ChatBot
 from chatterbot.ext.django_chatterbot import settings
 from django.views.decorators.csrf import csrf_exempt
 from django.utils.decorators import method_decorator
-from datetime import datetime as dt
-
+from django.utils import timezone as dt
 
 class ChatterBotAppView(TemplateView):
     template_name = 'bot/app.html'
 
     def get_context_data(self, **kwargs):
-
-        if dt.now().hour > 0 and dt.now().hour <= 11:
+        tz = 8
+        if dt.now().hour+tz > 0 and dt.now().hour+tz <= 11 :
             greeting = 'Morning'
-        elif dt.now().hour >=12 and dt.now().hour < 18:
+        elif dt.now().hour+tz >=12 and dt.now().hour+tz < 18:
             greeting = 'Afternoon'
         else:
             greeting = 'Hello'
