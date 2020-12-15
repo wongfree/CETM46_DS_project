@@ -12,8 +12,8 @@ import spacy
 
 def check_en():
     import subprocess
-    txt = subprocess.run(['sh ~/task.sh'])
-    print(txt)
+    # txt = subprocess.run(['bash', '~/task.sh'])
+    # print(txt)
 
 
 
