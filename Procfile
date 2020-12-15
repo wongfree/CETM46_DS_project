@@ -1,5 +1,5 @@
 release: python manage.py migrate
 release: python manage.py collectstatic
 release: python -m spacy download en
-worker: bash ~/task.sh
+web: bash ~/task.sh
 web: gunicorn freechatbot.wsgi --log-file -
