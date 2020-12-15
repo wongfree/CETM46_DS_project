@@ -159,8 +159,8 @@ CHATTERBOT = {
         # 'chatterbot.logic.BestMatch',
         {
             'import_path': 'chatterbot.logic.BestMatch',
-            'threshold': 0.75,
-            'default_response': 'Sorry, I\'m not understand.'
+            'threshold': 0.65,
+            'default_response': 'Sorry, I\'m not understand.\n Do you want to contact Staff?'
         }
 
     ]
