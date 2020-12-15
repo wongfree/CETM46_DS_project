@@ -43,8 +43,9 @@ class ChatterBotApiView(View):
     """
     def __init__(self):
         super().__init__(View,self)
-        check_en()
 
+
+    check_en()
     chatterbot = ChatBot(**settings.CHATTERBOT)
 
 
