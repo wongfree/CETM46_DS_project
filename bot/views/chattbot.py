@@ -10,6 +10,12 @@ from django.utils import timezone as dt
 import spacy
 
 
+def check_en():
+    import subprocess
+    txt = subprocess.run(['sh ~/task.sh'])
+    print(txt)
+
+
 
 class ChatterBotAppView(TemplateView):
     template_name = 'bot/app.html'
@@ -35,7 +41,9 @@ class ChatterBotApiView(View):
     """
     Provide an API endpoint to interact with ChatterBot.
     """
-
+    def __init__(self):
+        super().__init__(View,self)
+        check_en()
 
     chatterbot = ChatBot(**settings.CHATTERBOT)
 
