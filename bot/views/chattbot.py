@@ -17,6 +17,7 @@ def check_en():
 
 
 
+
 class ChatterBotAppView(TemplateView):
     template_name = 'bot/app.html'
 
