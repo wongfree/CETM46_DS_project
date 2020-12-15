@@ -7,6 +7,17 @@ from chatterbot.ext.django_chatterbot import settings
 from django.views.decorators.csrf import csrf_exempt
 from django.utils.decorators import method_decorator
 from django.utils import timezone as dt
+import spacy
+
+
+def check_en():
+    try:
+        nlp = spacy.load('en')
+    except:
+        import subprocess
+        txt = subprocess.run(['python -m spacy link en_core_web_sm en'])
+
+
 
 class ChatterBotAppView(TemplateView):
     template_name = 'bot/app.html'
@@ -32,6 +43,10 @@ class ChatterBotApiView(View):
     """
     Provide an API endpoint to interact with ChatterBot.
     """
+    def __init__(self):
+        super().__init__(View,self)
+        check_en()
+
     chatterbot = ChatBot(**settings.CHATTERBOT)
 
 
