@@ -1,13 +1,54 @@
 # DS_project
 
-project for CETM46 - chatbot
+Project for CETM46 - chatbot
 
 
-## potential dataset:
-L6 - Yahoo! Answers Comprehensive Questions and Answers version 1.0 (multi part)"<br  />
+## Introduction
+
+
+
+
+## Installation
+
+* install [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+* install [python3](https://www.python.org/downloads/)
+* Create and enable Virtual Env 
+```bash
+mkdir working_dir
+cd working_dir
+python -m venv venv
+```
+for windows system
+```bash
+venv\scripts\activate.bat
+```
+for Mac or Linux
+```bash
+venv/bin/activate
+```
+* Clone the source code to your Local
+```
+clone https://github.com/wongfree/CETM46_DS_project.git
+```
+* install the required library
+```bash
+cd CETM_DS_project
+pip3 install -r requirements.txt
+```
+* run the prototype server locally
+```bash
+python manage.py runserver
+```
+* access the prototype server at http://127.0.0.1:8000/
+
+
+
+## Potential Dataset:
+Yahoo! Answers Comprehensive Questions and Answers version 1.0 (multi part)"<br  />
 https://webscope.sandbox.yahoo.com/catalog.php?datatype=l <br/>
-McGill School of Computer Science <br/>
+Ubuntu CS log from McGill School of Computer Science <br/>
 http://cs.mcgill.ca/~jpineau/datasets/ubuntu-corpus-1.0/ubuntu_dialogs.tgz<br/>
 
 ### Demo
-https://freechatbot.herokuapp.com/
+https://freechatbot.herokuapp.com/chatbot/
+
