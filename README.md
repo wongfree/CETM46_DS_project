@@ -12,7 +12,7 @@ Project for CETM46 - chatbot
 
 * install [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 * install [python3](https://www.python.org/downloads/)
-* Create and enable Virtual Env 
+* Create and enable [Virtual Environment](https://docs.python.org/3/tutorial/venv.html) 
 ```bash
 mkdir working_dir
 cd working_dir
@@ -24,15 +24,15 @@ venv\scripts\activate.bat
 ```
 for Mac or Linux
 ```bash
-venv/bin/activate
+source venv/bin/activate
 ```
 * Clone the source code to your Local
 ```
-clone https://github.com/wongfree/CETM46_DS_project.git
+git clone https://github.com/wongfree/CETM46_DS_project.git
 ```
 * install the required library
 ```bash
-cd CETM_DS_project
+cd CETM46_DS_project
 pip3 install -r requirements.txt
 ```
 * run the prototype server locally
@@ -49,6 +49,6 @@ https://webscope.sandbox.yahoo.com/catalog.php?datatype=l <br/>
 Ubuntu CS log from McGill School of Computer Science <br/>
 http://cs.mcgill.ca/~jpineau/datasets/ubuntu-corpus-1.0/ubuntu_dialogs.tgz<br/>
 
-### Demo
+### Demo site
 https://freechatbot.herokuapp.com/chatbot/
 
