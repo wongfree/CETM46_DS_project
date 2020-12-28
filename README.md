@@ -35,6 +35,10 @@ git clone https://github.com/wongfree/CETM46_DS_project.git
 cd CETM46_DS_project
 pip3 install -r requirements.txt
 ```
+* install required Spacy language pack
+```bash
+python -m spacy download en
+``` 
 * run the prototype server locally
 ```bash
 python manage.py runserver
