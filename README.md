@@ -53,6 +53,6 @@ https://webscope.sandbox.yahoo.com/catalog.php?datatype=l <br/>
 Ubuntu CS log from McGill School of Computer Science <br/>
 http://cs.mcgill.ca/~jpineau/datasets/ubuntu-corpus-1.0/ubuntu_dialogs.tgz<br/>
 
-### Demo site
+### Demo site host under Heroku
 https://freechatbot.herokuapp.com/chatbot/
 
