@@ -17,9 +17,11 @@ class ChatterBotAppView(TemplateView):
     def get_context_data(self, **kwargs):
         tz = 8
         if dt.now().hour+tz > 0 and dt.now().hour+tz <= 11 :
-            greeting = 'Morning'
-        elif dt.now().hour+tz >=12 and dt.now().hour+tz < 18:
-            greeting = 'Afternoon'
+            greeting = 'Good Morning'
+        elif dt.now().hour+tz >=12 and dt.now().hour+tz < 15:
+            greeting = 'Good Afternoon'
+        elif dt.now().hour+tz >=18 and dt.now().hour+tz < 24:
+            greeting = 'Good Evening'
         else:
             greeting = 'Hello'
 
