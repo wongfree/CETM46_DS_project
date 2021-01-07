@@ -15,14 +15,14 @@
         <div class="row">
             <div class="col-md-6 offset-md-3">
                 <ul class="list-group chat-log js-chat-log">
-                    <li class="lsit-group-item">{{greeting}}</li>
+                    <li class="list-group-item">{{greeting}}</li>
                 </ul>
             </div>
         </div>
 
     </div>
     <div class="input-group input-group-md mt-1">
-        <input type="text" class="form-control js-text" placeholder="Type something to begin..."/>
+        <input type="text" class="form-control js-text" placeholder="Type your message here..."/>
         <span class="input-group-btn">
                         <button class="btn btn-primary js-say">Submit</button>
                     </span>
@@ -66,7 +66,7 @@
             }
 
         // Display the user's input on the web page
-        createRow(inputData.text);
+        createRow('user: ' + inputData.text);
 
         var $submit = $.ajax({
             type: 'POST',
@@ -76,7 +76,7 @@
             });
 
         $submit.done(function(statement) {
-            createRow(statement.text);
+            createRow('bot: ' + statement.text);
 
             // Clear the input field
             $input.val('');
