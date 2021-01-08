@@ -147,6 +147,7 @@ CHATTERBOT = {
     'django_app_name': 'django_chatterbot',
     'storage_adapter':'chatterbot.storage.SQLStorageAdapter',
     'database_uri':'sqlite:///{}'.format(os.path.join(BASE_DIR, 'db.sqlite3')),
+    #'database_uri':'sqlite:///{}'.format(os.path.join(BASE_DIR, 'db_full.sqlite3')),
     'database': 'chatbot',
     'preprocessors': [
         'chatterbot.preprocessors.clean_whitespace',
