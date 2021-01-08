@@ -8,7 +8,6 @@ Project for CETM46 - chatbot
 This project trying to implement a web-base ChatBot with Django & Chatterbot library. 
 
 
-
 ## Installation
 
 * install [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
