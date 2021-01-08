@@ -5,6 +5,7 @@ Project for CETM46 - chatbot
 
 ## Introduction
 
+This project trying to implement a web-base ChatBot with Django & Chatterbot library. 
 
 
 
@@ -47,12 +48,12 @@ python manage.py runserver
 
 
 
-## Potential Dataset:
-Yahoo! Answers Comprehensive Questions and Answers version 1.0 (multi part)"<br  />
-https://webscope.sandbox.yahoo.com/catalog.php?datatype=l <br/>
+## Dataset:
+
 Ubuntu CS log from McGill School of Computer Science <br/>
 http://cs.mcgill.ca/~jpineau/datasets/ubuntu-corpus-1.0/ubuntu_dialogs.tgz<br/>
 
 ### Demo site host under Heroku
-https://freechatbot.herokuapp.com/chatbot/
+https://freechatbot.herokuapp.com/chatbot/ <br/>
+<small><i> * because of the hosting limit the demo site only applied a simple trained model 
 
