@@ -24,20 +24,21 @@
 
     {% block style %} {% endblock %}
     <style>.beta-ribbon {
-                z-index: 100;
+                z-index: 80;
                 text-transform: uppercase;
                 font-weight: 800;
-                font-size: 10px;
-                width: 140px;
+                font-size: 8px;
+                width: 110px;
+
                 background: #50bcb6;
                 position: absolute;
                 top: 0px;
-                right: -50px;
+                right: -35px;
                 text-align: center;
                 line-height: 30px;
                 letter-spacing: 1px;
                 color: #f0f0f0;
-                transform: rotate(45deg); }</style>
+                transform: rotate(30deg); }</style>
     <!--[if lt IE 9]-->
     <script src="{% static 'js/html5shiv.min.js'%}"></script>
     <script src="{% static 'js/respond.min.js'%}"></script>
@@ -58,7 +59,7 @@
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="beta-ribbon top-right sticky blue"
              style="font-weight: bold; font-size: 6px;font-family: 'Noto Sans', sans-serif;z-index:9999; ">
-             PROTOTYPE
+             Prototype
         </div>
 
         <div class="container-fluid">
