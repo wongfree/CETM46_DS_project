@@ -1,10 +1,5 @@
-# DS_project
-
-Project for CETM46 - chatbot
-
-
 ## Introduction
-
+Project for CETM46 - chatbot
 This project trying to implement a web-base ChatBot with Django & Chatterbot library. 
 
 
@@ -46,6 +41,17 @@ python manage.py runserver
 * access the prototype server at http://127.0.0.1:8000/
 
 
+## With Full trained DB
+in order to link to full trained DB, you need to modify the the setting.py file, which located under: project/freechatbot/setting.py.<br/> 
+*this will cause the bot slow response
+chaneg following code:
+```
+line 149:   'database_uri':'sqlite:///{}'.format(os.path.join(BASE_DIR, 'db.sqlite3')),
+
+-->
+
+line 149:   'database_uri':'sqlite:///{}'.format(os.path.join(BASE_DIR, 'db_full.sqlite3')),
+```
 
 ## Dataset:
 
