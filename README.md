@@ -42,16 +42,19 @@ python manage.py runserver
 
 
 ## With Full trained DB
-in order to link to full trained DB, you need to modify the the setting.py file, which located under: project/freechatbot/setting.py.<br/> 
-*this will cause the bot slow response
-chaneg following code:
+in order to use full trained DB, you will need to modify the the train.py file as follow steps.,br/>
+**this will cause the bot slow response<br/>
+1st - uncomment following code at the bottom of train.py file:
 ```
-line 149:   'database_uri':'sqlite:///{}'.format(os.path.join(BASE_DIR, 'db.sqlite3')),
-
--->
-
-line 149:   'database_uri':'sqlite:///{}'.format(os.path.join(BASE_DIR, 'db_full.sqlite3')),
+trainer = UbuntuCorpusTrainer(chatbot)
+# Download and training our bot with the Ubuntu corpus data
+trainer.train()
 ```
+2nd - run train.py:
+```bash
+python train.py
+```
+
 
 ## Dataset:
 
