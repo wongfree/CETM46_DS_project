@@ -155,9 +155,9 @@ CHATTERBOT = {
     ],
     'logic_adapters': [
         'chatterbot.logic.UnitConversion',
-        # 'chatterbot.logic.MathematicalEvaluation',
-        # 'chatterbot.logic.TimeLogicAdapter',
-        # 'chatterbot.logic.BestMatch',
+        'chatterbot.logic.MathematicalEvaluation',
+        'chatterbot.logic.TimeLogicAdapter',
+        'chatterbot.logic.BestMatch',
         {
             'import_path': 'chatterbot.logic.BestMatch',
             'threshold': 0.65,
