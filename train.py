@@ -1,5 +1,7 @@
 from chatterbot import ChatBot
 from chatterbot.trainers import ChatterBotCorpusTrainer
+from chatterbot.trainers import UbuntuCorpusTrainer
+from chatterbot.trainers import ListTrainer
 from freechatbot import settings
 
 chatbot = ChatBot(**settings.CHATTERBOT)
@@ -12,7 +14,7 @@ trainer.train(
                 "chatterbot.corpus.english.food",
                 "chatterbot.corpus.english.ai"
               )
-from chatterbot.trainers import ListTrainer
+
 
 trainer = ListTrainer(chatbot)
 
@@ -68,8 +70,9 @@ trainer.train([
     "Thank you very much for using ur services."
 ])
 
-# from chatterbot.trainers import UbuntuCorpusTrainer
 
+# if want to train with Ubuntu corpus data, uncomment following part
+# please be aware this process may take more then a days, depend on your computer performance
 
 # trainer = UbuntuCorpusTrainer(chatbot)
 #
